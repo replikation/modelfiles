@@ -24,7 +24,7 @@ ctx=""
 # We identify tags by the presence of ':' and attributes by patterns like 'GB' or 'K'
 while read -r line; do
     if [[ $line == *":"* ]]; then
-        if [ -n "$current_model" ]; then
+        if [ -n "$current_model" ] && [[ "$current_model" == *"-"* ]]; then
             printf "${CYAN}%-40s${NC} ${BLUE}%-12s${NC} ${YELLOW}%-12s${NC}\n" "$current_model" "$size" "$ctx"
         fi
         current_model=$line
