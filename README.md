@@ -26,5 +26,5 @@ Repo containing some model files and descriptions for it etc.
 
 # Models to test
 
-https://deep-reinforce.com/ornith_1_0.html
+
 qwen 3.6

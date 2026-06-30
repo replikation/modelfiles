@@ -12,7 +12,7 @@ printf "${CYAN}%-35s${NC} ${BLUE}%-12s${NC} ${YELLOW}%-12s${NC} ${MAGENTA}%-12s$
 
 ollama list | tail -n +2 | while read -r line; do
     model=$(echo "$line" | awk '{print $1}')
-    params=$(ollama show "$model" 2>/dev/null | grep -m 1 'parameters' | awk '{print $2}' | tr -d ' ')
+    if [[ $model != *-* ]]; then continue; fi    params=$(ollama show "$model" 2>/dev/null | grep -m 1 'parameters' | awk '{print $2}' | tr -d ' ')
     qnt=$(ollama show "$model" 2>/dev/null | grep 'quantization' | awk '{print $2}' | tr -d ' ')
     ctx_theo=$(ollama show "$model" 2>/dev/null | grep 'context length' | awk '{print $3}'  | awk '{val=$1} END {print (val ? (val >= 1024 ? int(val/1024)"k" : val) : "auto")}')
     actual_ctx=$(ollama show "$model" --parameters 2>/dev/null | grep 'num_ctx' | awk '{print $2}' | tr -d ' ' | awk '{val=$1} END {print (val ? (val >= 1024 ? int(val/1024)"k" : val) : "auto")}')

@@ -1,0 +1,25 @@
+# ==============================================================================
+# MODEL METADATA (For Repository Tracking)
+# ==============================================================================
+# MODEL_NAME:  ornith 9b q4_K_M
+# SOURCE:      https://ollama.com/library/gemma4/tags
+# VRAM_REQ:    ~9GB
+# HARDWARE:    RTX 2080 Ti 12GB
+# DESCRIPTION: seems fast but slightly unstable
+# ==============================================================================
+
+# 1. BASE MODEL
+FROM ornith:9b-q4_K_M
+
+# 2. CONTEXT & PERFORMANCE TUNING
+# Utilizing native high-context capabilities safely.
+PARAMETER num_ctx 262144
+# PARAMETER num_predict 4096      
+# PARAMETER num_thread 16         
+
+# 3. SAMPLING & REASONING TUNING
+# Values tailored for creative/reasoning balance.
+PARAMETER temperature 1.0 
+PARAMETER top_p 0.95 
+PARAMETER top_k 64 
+# PARAMETER repeat_penalty 1.1 
