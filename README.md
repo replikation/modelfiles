@@ -49,12 +49,16 @@ nano ~/.config/opencode/opencode.jsonc
       "models": {
         "gemma4__12b-q4:latest": {
           "name": "gemma4__12b-q4:latest",
-          "capabilities": ["text", "image", "tools"]
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
         }
       }
     }
   }
 }
+
 ```
 
 # images and files
