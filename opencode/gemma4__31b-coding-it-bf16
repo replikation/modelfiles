@@ -4,7 +4,7 @@
 # MODEL_NAME:  Gemma 4 31B It (BF16)
 # SOURCE:      https://ollama.com/library/gemma4/tags
 # VRAM_REQ:    ~100GB
-# HARDWARE:    Nvidia Spark / Multi-GPU
+# HARDWARE:    Nvidia Spark
 # DESCRIPTION: Exceptional coding and reasoning capabilities, but higher latency.
 # ==============================================================================
 

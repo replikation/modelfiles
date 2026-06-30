@@ -4,7 +4,7 @@
 # MODEL_NAME:  Gemma 4 12B It (Q8_0)
 # SOURCE:      https://ollama.com/library/gemma4/tags
 # VRAM_REQ:    ~9GB
-# HARDWARE:    Gaming PC (RTX 2080 Ti 12GBRAM VRAM)
+# HARDWARE:    RTX 2080 Ti 12GB
 # DESCRIPTION: very slow
 # ==============================================================================
 
