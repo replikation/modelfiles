@@ -23,3 +23,8 @@ Repo containing some model files and descriptions for it etc.
 ```bash
 ./online_models.sh
 ```
+
+# Models to test
+
+https://deep-reinforce.com/ornith_1_0.html
+qwen 3.6
