@@ -1,0 +1,25 @@
+# ==============================================================================
+# MODEL METADATA (For Repository Tracking)
+# ==============================================================================
+# MODEL_NAME:  <full model name>
+# SOURCE:      <add the ollama link>
+# VRAM_REQ:    <in GB>
+# HARDWARE:    <nvidia spark | consumer pc | cloud | gaming pc>
+# DESCRIPTION: <DESCRIPTION about coding and speed>
+# ==============================================================================
+
+# 1. BASE MODEL
+FROM <modelname>
+
+# 2. CONTEXT & PERFORMANCE TUNING
+# Utilizing native high-context capabilities safely.
+PARAMETER num_ctx <add the context size>
+# PARAMETER num_predict 4096
+# PARAMETER num_thread 16
+
+# 3. SAMPLING & REASONING TUNING
+# Values tailored for creative/reasoning balance.
+PARAMETER temperature 1.0 
+PARAMETER top_p 0.95 
+PARAMETER top_k 64 
+# PARAMETER repeat_penalty 1.1 

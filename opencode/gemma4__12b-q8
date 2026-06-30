@@ -1,25 +1,25 @@
 # ==============================================================================
 # MODEL METADATA (For Repository Tracking)
 # ==============================================================================
-# MODEL_NAME:  Gemma 4 31B It (BF16)
+# MODEL_NAME:  Gemma 4 12B It (Q8_0)
 # SOURCE:      https://ollama.com/library/gemma4/tags
-# VRAM_REQ:    ~100GB
-# HARDWARE:    Nvidia Spark / Multi-GPU
-# DESCRIPTION: Exceptional coding and reasoning capabilities, but higher latency.
+# VRAM_REQ:    ~9GB
+# HARDWARE:    Gaming PC (RTX 2080 Ti 12GBRAM VRAM)
+# DESCRIPTION: very slow
 # ==============================================================================
 
 # 1. BASE MODEL
-FROM gemma4:31b-it-bf16
+FROM gemma4:12b-it-q8_0
 
 # 2. CONTEXT & PERFORMANCE TUNING
 # Utilizing native high-context capabilities safely.
 PARAMETER num_ctx 262144
-# PARAMETER num_predict 4096      # Max tokens to generate per response, optional
-# PARAMETER num_thread 16         # Adjust based on your CPU/system architecture, optional
+# PARAMETER num_predict 4096      
+# PARAMETER num_thread 16         
 
 # 3. SAMPLING & REASONING TUNING
 # Values tailored for creative/reasoning balance.
-PARAMETER temperature 1.0 # optional
-PARAMETER top_p 0.95 # optional
-PARAMETER top_k 64 # optional
-# PARAMETER repeat_penalty 1.1 # optional
+PARAMETER temperature 1.0 
+PARAMETER top_p 0.95 
+PARAMETER top_k 64 
+# PARAMETER repeat_penalty 1.1 
